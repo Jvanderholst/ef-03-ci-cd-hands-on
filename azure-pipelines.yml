@@ -4,7 +4,13 @@
 # https://aka.ms/yaml
 
 trigger:
-- master
+  branches:
+   include:
+     - master
+     - releases/*
+   exclude:
+     - releases/old*
+
 
 pool:
   vmImage: 'ubuntu-latest'
